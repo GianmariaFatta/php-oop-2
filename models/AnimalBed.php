@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ . '/models/Product.php';
+include_once __DIR__ . './models/Product.php';
 
 class AnimalBed extends Product
 {

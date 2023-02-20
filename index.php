@@ -1,9 +1,5 @@
 <?php
-//     Immaginare quali sono le classi necessarie per creare uno shop online con le seguenti caratteristiche:
-// - L'e-commerce vende prodotti per animali.
-// - I prodotti sono categorizzati, le categorie sono Cani o Gatti.
-// - Tra i prodotti, troviamo cibo, giochi, cucce, etc.
-// Stampiamo delle card contenenti i dettagli dei prodotti, come immagine, titolo, prezzo, icona della categoria ed il tipo di articolo che si sta visualizzando (prodotto, cibo, gioco, cuccia ecc).
+
 include_once __DIR__ . '/models/Product.php';
 include_once __DIR__ . '/models/AnimalBed.php';
 include_once __DIR__ . '/models/AnimalFood.php';
@@ -22,4 +18,39 @@ Grain Vegetables Meat and vegetable by-products Nutrient supplements Synthetic t
 $dog_around = new AnimalToys('rubber', 'Dog Balls', 'Dog around', 12, 'dog', 'ball', 'multicolor', 'oval');
 $funny_cat = new AnimalToys('wool', 'Wool 4 cat', 'Funny cat', 23, 'cat', 'ball', 'multicolor', 'clew');
 
+$animal_toys = [$dog_around, $funny_cat];
+$animal_food = [$muscle_dog, $agility_cat];
+$animal_bed = [$classic_dog_bed, $classic_cat_bed];
+
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>OOP-2</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <?php foreach ($animal_toys as $a_toy): ?>
+                <div class="col-6">
+                    <div class='card'></div>
+                    <ul>
+                        <li>
+                            <?= $a_toy->name ?>
+                        </li>
+                    </ul>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</body>
+
+</html>
