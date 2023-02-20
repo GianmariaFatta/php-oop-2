@@ -4,24 +4,10 @@
 // - I prodotti sono categorizzati, le categorie sono Cani o Gatti.
 // - Tra i prodotti, troviamo cibo, giochi, cucce, etc.
 // Stampiamo delle card contenenti i dettagli dei prodotti, come immagine, titolo, prezzo, icona della categoria ed il tipo di articolo che si sta visualizzando (prodotto, cibo, gioco, cuccia ecc).
-
-class Product
-{
-    public $material;
-    public $product_producer;
-    public $name;
-
-    public function __construct($_material, $_product_producer, $_name)
-    {
-        $this->material = $_material;
-        $this->product_producer = $_product_producer;
-        $this->name = $_name;
-
-    }
+include_once __DIR__ . '/models/Product.php';
+include_once __DIR__ . '/models/AnimalBed.php';
 
 
-
-}
 
 
 
