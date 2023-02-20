@@ -1,9 +1,9 @@
 <?php
 
-include_once __DIR__ . '/models/Product.php';
-include_once __DIR__ . '/models/AnimalBed.php';
-include_once __DIR__ . '/models/AnimalFood.php';
-include_once __DIR__ . '/models/AnimalToys.php';
+require __DIR__ . '/models/Product.php';
+require __DIR__ . '/models/Bed.php';
+require __DIR__ . '/models/Food.php';
+require __DIR__ . '/models/Toys.php';
 
 //  BED
 $classic_dog_bed = new AnimalBed('plastic', 'Sleep Dog', 'Classic for dog', 30, 'dog', 'medium', 'black');
@@ -39,12 +39,115 @@ $animal_bed = [$classic_dog_bed, $classic_cat_bed];
 <body>
     <div class="container">
         <div class="row">
+            <!-- ANIMAL TOYS -->
             <?php foreach ($animal_toys as $a_toy): ?>
                 <div class="col-6">
-                    <div class='card'></div>
+                    <div class='card'>
+                        <img src="https://citynews-udinetoday.stgy.ovh/~media/horizontal-mid/62114244262612/animali-domestici-2.jpg"
+                            alt="">
+                    </div>
                     <ul>
                         <li>
                             <?= $a_toy->name ?>
+                        </li>
+                        <li>
+                            <?= $a_toy->product_producer ?>
+
+                        </li>
+                        <li>
+                            <?= $a_toy->material ?>
+
+                        </li>
+                        <li>
+                            <?= $a_toy->animal ?>
+
+                        </li>
+                        <li>
+                            <?= $a_toy->shape ?>
+
+                        </li>
+                        <li>
+                            <?= $a_toy->color ?>
+                        </li>
+                        <li>
+                            <?= $a_toy->feature ?>
+                        </li>
+                        <li>
+                            <?= $a_toy->price ?>
+                        </li>
+                    </ul>
+                </div>
+
+            <?php endforeach; ?>
+            <?php foreach ($animal_food as $a_food): ?>
+                <div class="col-6">
+                    <div class='card'>
+                        <img src="https://citynews-udinetoday.stgy.ovh/~media/horizontal-mid/62114244262612/animali-domestici-2.jpg"
+                            alt="">
+                    </div>
+                    <ul>
+                        <li>
+                            <?= $a_food->name ?>
+                        </li>
+                        <li>
+                            <?= $a_food->product_producer ?>
+
+                        </li>
+                        <li>
+                            <?= $a_food->material ?>
+
+                        </li>
+                        <li>
+                            <?= $a_food->animal ?>
+
+                        </li>
+                        <li>
+                            <?= $a_food->ingredients ?>
+
+                        </li>
+                        <li>
+                            <?= $a_food->consistency ?>
+                        </li>
+                        <li>
+                            <?= $a_food->weight ?>
+                        </li>
+                        <li>
+                            <?= $a_food->price ?>
+                        </li>
+                    </ul>
+                </div>
+            <?php endforeach; ?>
+            <?php foreach ($animal_bed as $a_bed): ?>
+                <div class="col-6">
+                    <div class='card'>
+                        <img src="https://citynews-udinetoday.stgy.ovh/~media/horizontal-mid/62114244262612/animali-domestici-2.jpg"
+                            alt="">
+                    </div>
+                    <ul>
+                        <li>
+                            <?= $a_bed->name ?>
+                        </li>
+                        <li>
+                            <?= $a_bed->product_producer ?>
+
+                        </li>
+                        <li>
+                            <?= $a_bed->material ?>
+
+                        </li>
+                        <li>
+                            <?= $a_bed->animal ?>
+
+                        </li>
+
+                        <li>
+                            <?= $a_bed->size ?>
+                        </li>
+                        <li>
+                            <?= $a_bed->color ?>
+                        </li>
+                        <li>
+                            <?= $a_bed->price ?>
                         </li>
                     </ul>
                 </div>
