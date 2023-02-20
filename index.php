@@ -1,26 +1,8 @@
 <?php
-
 require __DIR__ . '/models/Product.php';
 require __DIR__ . '/models/Bed.php';
 require __DIR__ . '/models/Food.php';
 require __DIR__ . '/models/Toys.php';
-
-//  BED
-$classic_dog_bed = new AnimalBed('plastic', 'Sleep Dog', 'Classic for dog', 30, 'dog', 'medium', 'black');
-$classic_cat_bed = new AnimalBed('plastic', 'Sleep Cat', 'Classic for cat', 25, 'cat', 'medium', 'white');
-
-//  FOOD\
-$muscle_dog = new AnimalFood('organic', 'Luigi for dog', 'Muscle Dog', 'Dog', 4, 'Cereals, which are basic carbohydrates like grain, rice bran, and beet pulp,Fats and oils, a source for vitamins, as well as the energy that dogs need to survive. ', 'humid', '500gr');
-$agility_cat = new AnimalFood('organic', ' Lisa\'s Love', 'Agility Cat', 'Cat', 4, 'Meat
-Grain Vegetables Meat and vegetable by-products Nutrient supplements Synthetic thickeners Flavour enhancers', 'humid', '500gr');
-
-// TOYS
-$dog_around = new AnimalToys('rubber', 'Dog Balls', 'Dog around', 12, 'dog', 'ball', 'multicolor', 'oval');
-$funny_cat = new AnimalToys('wool', 'Wool 4 cat', 'Funny cat', 23, 'cat', 'ball', 'multicolor', 'clew');
-
-$animal_toys = [$dog_around, $funny_cat];
-$animal_food = [$muscle_dog, $agility_cat];
-$animal_bed = [$classic_dog_bed, $classic_cat_bed];
 
 ?>
 
@@ -37,7 +19,7 @@ $animal_bed = [$classic_dog_bed, $classic_cat_bed];
 </head>
 
 <body>
-    <div class="container">
+    <div class="container m-5">
         <div class="row">
             <!-- ANIMAL TOYS -->
             <?php foreach ($animal_toys as $a_toy): ?>
@@ -59,7 +41,7 @@ $animal_bed = [$classic_dog_bed, $classic_cat_bed];
 
                         </li>
                         <li>
-                            <?= $a_toy->animal ?>
+                            <?= $a_toy->categories->animals_one ?>
 
                         </li>
                         <li>
@@ -98,7 +80,7 @@ $animal_bed = [$classic_dog_bed, $classic_cat_bed];
 
                         </li>
                         <li>
-                            <?= $a_food->animal ?>
+                            <?= $a_food->categories->animals_one ?>
 
                         </li>
                         <li>
@@ -136,7 +118,7 @@ $animal_bed = [$classic_dog_bed, $classic_cat_bed];
 
                         </li>
                         <li>
-                            <?= $a_bed->animal ?>
+                            <?= $a_bed->categories->animals_one ?>
 
                         </li>
 
