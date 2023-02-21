@@ -78,7 +78,7 @@ require __DIR__ . '/models/Toys.php';
                         </li>
                     </ul>
                 </div>
-
+                <!-- ANIMAL FOOD -->
             <?php endforeach; ?>
             <?php foreach ($animal_food as $a_food): ?>
                 <div class="col-6">
@@ -134,6 +134,7 @@ require __DIR__ . '/models/Toys.php';
                         </li>
                     </ul>
                 </div>
+                <!-- ANIMAL BED -->
             <?php endforeach; ?>
             <?php foreach ($animal_bed as $a_bed): ?>
                 <div class="col-6">
