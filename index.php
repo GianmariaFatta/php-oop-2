@@ -22,40 +22,59 @@ require __DIR__ . '/models/Toys.php';
     <div class="container m-5">
         <div class="row">
             <!-- ANIMAL TOYS -->
+            <div class="col-12 text-center">
+                <h1 class="mb-5">JIMMY ANIMALS LAB</h1>
+            </div>
             <?php foreach ($animal_toys as $a_toy): ?>
                 <div class="col-6">
+                    <h3>Animals Toys</h3>
                     <div class='card'>
-                        <img src="https://citynews-udinetoday.stgy.ovh/~media/horizontal-mid/62114244262612/animali-domestici-2.jpg"
-                            alt="">
+                        <img class="w-75" src=<?php echo $a_toy->img ?> alt="">
                     </div>
                     <ul>
                         <li>
-                            <?= $a_toy->name ?>
+                            <p>Name:
+                                <?= $a_toy->name ?>
+                            </p>
                         </li>
                         <li>
-                            <?= $a_toy->product_producer ?>
+                            <p>Product-producer:
+                                <?= $a_toy->product_producer ?>
+                            </p>
 
                         </li>
                         <li>
-                            <?= $a_toy->material ?>
+                            <p>Material:
+                                <?= $a_toy->material ?>
+                            </p>
 
                         </li>
                         <li>
-                            <?= $a_toy->categories->animals_one ?>
+                            <p>For:
+                                <?= $a_toy->categories->animals_one ?>
+                            </p>
 
                         </li>
                         <li>
-                            <?= $a_toy->shape ?>
+                            <p>Shape:
+                                <?= $a_toy->shape ?>
+                            </p>
 
                         </li>
                         <li>
-                            <?= $a_toy->color ?>
+                            <p>Color:
+                                <?= $a_toy->color ?>
+                            </p>
                         </li>
                         <li>
-                            <?= $a_toy->feature ?>
+                            <p>Feature:
+                                <?= $a_toy->feature ?>
+                            </p>
                         </li>
                         <li>
-                            <?= $a_toy->price ?>
+                            <p>Price: €
+                                <?= $a_toy->price ?>
+                            </p>
                         </li>
                     </ul>
                 </div>
@@ -63,73 +82,105 @@ require __DIR__ . '/models/Toys.php';
             <?php endforeach; ?>
             <?php foreach ($animal_food as $a_food): ?>
                 <div class="col-6">
+                    <h3 class="mt-5">Animals Food</h3>
                     <div class='card'>
-                        <img src="https://citynews-udinetoday.stgy.ovh/~media/horizontal-mid/62114244262612/animali-domestici-2.jpg"
-                            alt="">
+                        <img class="w-75" src=<?php echo $a_food->img ?> alt="">
                     </div>
+
                     <ul>
                         <li>
-                            <?= $a_food->name ?>
+                            <p>Name:
+                                <?= $a_food->name ?>
+                            </p>
                         </li>
                         <li>
-                            <?= $a_food->product_producer ?>
+                            <p>Product-producer:
+                                <?= $a_food->product_producer ?>
+                            </p>
 
                         </li>
                         <li>
-                            <?= $a_food->material ?>
+                            <p>Material:
+                                <?= $a_food->material ?>
+                            </p>
 
                         </li>
                         <li>
-                            <?= $a_food->categories->animals_one ?>
+                            <p>For:
+                                <?= $a_food->categories->animals_one ?>
+                            </p>
 
                         </li>
                         <li>
-                            <?= $a_food->ingredients ?>
+                            <p>Ingredients:
+                                <?= $a_food->ingredients ?>
+                            </p>
 
                         </li>
                         <li>
-                            <?= $a_food->consistency ?>
+                            <p>Consistency:
+                                <?= $a_food->consistency ?>
+                            </p>
                         </li>
                         <li>
-                            <?= $a_food->weight ?>
+                            <p>Weight:
+                                <?= $a_food->weight ?>
+                            </p>
                         </li>
                         <li>
-                            <?= $a_food->price ?>
+                            <p>Price: €
+                                <?= $a_food->price ?>
+                            </p>
                         </li>
                     </ul>
                 </div>
             <?php endforeach; ?>
             <?php foreach ($animal_bed as $a_bed): ?>
                 <div class="col-6">
+                    <h3 class="mt-5">Animals Bed</h3>
                     <div class='card'>
-                        <img src="https://citynews-udinetoday.stgy.ovh/~media/horizontal-mid/62114244262612/animali-domestici-2.jpg"
-                            alt="">
+                        <img class="w-75" src=<?php echo $a_bed->img ?> alt="">
                     </div>
+
                     <ul>
                         <li>
-                            <?= $a_bed->name ?>
+                            <p>Name:
+                                <?= $a_bed->name ?>
+                            </p>
                         </li>
                         <li>
-                            <?= $a_bed->product_producer ?>
+                            <p>Product-producer:
+                                <?= $a_bed->product_producer ?>
+                            </p>
 
                         </li>
                         <li>
-                            <?= $a_bed->material ?>
+                            <p>Material:
+                                <?= $a_bed->material ?>
+                            </p>
 
                         </li>
                         <li>
-                            <?= $a_bed->categories->animals_one ?>
+                            <p>For:
+                                <?= $a_bed->categories->animals_one ?>
+                            </p>
 
                         </li>
 
                         <li>
-                            <?= $a_bed->size ?>
+                            <p>Size:
+                                <?= $a_bed->size ?>
+                            </p>
                         </li>
                         <li>
-                            <?= $a_bed->color ?>
+                            <p>Color:
+                                <?= $a_bed->color ?>
+                            </p>
                         </li>
                         <li>
-                            <?= $a_bed->price ?>
+                            <P>Price: €
+                                <?= $a_bed->price ?>
+                            </P>
                         </li>
                     </ul>
                 </div>
