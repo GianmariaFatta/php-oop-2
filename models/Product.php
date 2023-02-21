@@ -9,8 +9,18 @@ class Product
     public $product_producer;
     public $name;
     public $categories;
-    public $price;
+    private $price;
 
+
+    public function getPrice()
+    {
+        return $this->price;
+    }
+    public function setPrice($_price)
+    {
+        $this->price = $_price;
+        return $this;
+    }
 
     public function __construct($_img, $_material, $_product_producer, $_name, Categories $_categories, $_price)
     {
@@ -23,6 +33,7 @@ class Product
 
     }
 }
+
 
 
 ?>

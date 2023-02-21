@@ -73,7 +73,7 @@ require __DIR__ . '/models/Toys.php';
                         </li>
                         <li>
                             <p>Price: €
-                                <?= $a_toy->price ?>
+                                <?= $a_toy->getPrice() ?>
                             </p>
                         </li>
                     </ul>
@@ -129,7 +129,7 @@ require __DIR__ . '/models/Toys.php';
                         </li>
                         <li>
                             <p>Price: €
-                                <?= $a_food->price ?>
+                                <?= $a_food->getPrice() ?>
                             </p>
                         </li>
                     </ul>
@@ -180,7 +180,7 @@ require __DIR__ . '/models/Toys.php';
                         </li>
                         <li>
                             <P>Price: €
-                                <?= $a_bed->price ?>
+                                <?= $a_bed->getPrice() ?>
                             </P>
                         </li>
                     </ul>
